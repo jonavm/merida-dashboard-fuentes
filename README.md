@@ -1,33 +1,50 @@
-# Fuentes para el dashboard de accidentes viales en Mérida
+# Datos viales de Mérida
 
-Entrega de fuentes del equipo para el ETL y el dashboard colaborativo. La base es el registro georreferenciado de INEGI ATUS para el **municipio de Mérida, Yucatán (31050), 2021–2024**. Los archivos ya descargados se pueden usar sin acceso a la VM.
+![Mapa de las ubicaciones de 8,815 registros ATUS de 2021 a 2024 en el municipio de Mérida, Yucatán.](assets/portada.png)
 
-## Datos listos para cargar
+Archivos y fuentes para el ETL del dashboard de accidentes viales en el **municipio de Mérida, Yucatán (31050)**. El punto de partida es el registro georreferenciado de accidentes de INEGI.
 
-| Fuente | Archivo incluido | Enlace oficial y acceso |
+[Descargas](#descargas) · [Procedencia y acceso](#procedencia-y-acceso) · [Fuentes en preparación](#fuentes-en-preparación) · [Claves para el ETL](#claves-para-el-etl)
+
+## Descargas
+
+**Empieza por [ATUS con geografía](datos/para-etl/atus/accidentes_merida_enriquecido.csv)** para trabajar por zona, o usa el [CSV limpio](datos/para-etl/atus/accidentes_merida.csv) para trabajar por accidente.
+
+| Datos | Alcance | Archivos |
 | --- | --- | --- |
-| **INEGI ATUS** | [CSV limpio](datos/para-etl/atus/accidentes_merida.csv), [CSV con geografía](datos/para-etl/atus/accidentes_merida_enriquecido.csv) y [GeoJSON de origen](datos/originales/atus/accidentes_merida.geojson). Se conservaron 8,815 registros. | [Programa ATUS de INEGI](https://www.inegi.org.mx/programas/accidentes/) y [servicio WFS](https://mapas.inegi.org.mx/geoserver/wfs). La [ficha de la descarga](datos/originales/atus/accidentes_merida.fuente.json) detalla la capa, el filtro `EDO=31 AND MPIO=50` y la paginación. |
-| **INEGI Marco Geoestadístico** | [Municipio](datos/originales/marco-geoestadistico/mgem_31050.geojson), [AGEB urbanas](datos/originales/marco-geoestadistico/agebu_31050.geojson) y [AGEB rurales](datos/originales/marco-geoestadistico/agebr_31050.geojson), edición de diciembre de 2025. | [Catálogo oficial de INEGI](https://www.inegi.org.mx/servicios/catalogounico.html). Las URLs de cada capa están en [fuentes.json](datos/originales/marco-geoestadistico/fuentes.json). |
-| **C01 · INEGI DENUE** | [CSV de 56,909 establecimientos](datos/para-etl/denue/establecimientos_merida.csv), edición 2026/05 corregida. Incluye ID, actividad, estrato, coordenadas e indicadores de validación. | [API DENUE](https://www.inegi.org.mx/servicios/api_denue.html). Para actualizar, usar `BuscarAreaAct` con entidad `31`, municipio `050` y un token propio. |
-| **C02 · SICT / datos.gob.mx** | [CSV de aforos de Yucatán](datos/para-etl/sict/datos_viales_yucatan.csv), 4,169 observaciones de 2013–2024, y [respuestas JSON originales](datos/originales/sict/). | [Datos viales de la SICT](https://www.datos.gob.mx/es/dataset/datos_viales), CC BY 4.0 según el catálogo. El [manifiesto](datos/originales/sict/provenance.json) documenta el filtro por Yucatán y el acceso a través de la API CKAN. |
-| **C03 · SIEGY** | [Boletín original en PDF](datos/originales/siegy/boletin_2025_11_transporte_sostenible.pdf) y [CSV con seis indicadores transcritos](datos/para-etl/siegy/indicadores_movilidad_siegy_2025_11.csv). | [Boletín 2025-11 del Gobierno de Yucatán](https://datos.yucatan.gob.mx/storage/boletines/archivos/2025/Boletin_2025_11.pdf). |
-| **C06 · Prensa** | [CSV con enlaces y metadatos](datos/para-etl/prensa/referencias.csv). Incluye 34 artículos revisados y el estado de selección de cada uno. | Consultar los enlaces de cada fila en [La Jornada Maya](https://www.lajornadamaya.mx/) y [Yucatán al Instante](https://www.yucatanalinstante.com/). El equipo incluyó 25 artículos en su muestra. Los textos y las fotos se consultan en los sitios de origen. |
+| **Accidentes · INEGI ATUS** | 8,815 registros en Mérida · 2021–2024 | [CSV limpio](datos/para-etl/atus/accidentes_merida.csv) · [CSV con geografía](datos/para-etl/atus/accidentes_merida_enriquecido.csv) · [GeoJSON original](datos/originales/atus/accidentes_merida.geojson) |
+| **Límites y AGEB · INEGI** | Marco Geoestadístico · diciembre de 2025 | [Municipio](datos/originales/marco-geoestadistico/mgem_31050.geojson) · [AGEB urbanas](datos/originales/marco-geoestadistico/agebu_31050.geojson) · [AGEB rurales](datos/originales/marco-geoestadistico/agebr_31050.geojson) |
+| **Establecimientos · INEGI DENUE** | 56,909 establecimientos · edición 2026/05 corregida | [CSV para ETL](datos/para-etl/denue/establecimientos_merida.csv) |
+| **Aforos · SICT** | 4,169 observaciones de Yucatán · 2013–2024 | [CSV para ETL](datos/para-etl/sict/datos_viales_yucatan.csv) · [JSON originales](datos/originales/sict/) |
+| **Transporte sostenible · SIEGY** | Seis indicadores del boletín 2025-11 | [CSV de indicadores](datos/para-etl/siegy/indicadores_movilidad_siegy_2025_11.csv) · [Boletín PDF](datos/originales/siegy/boletin_2025_11_transporte_sostenible.pdf) |
+| **Cobertura de prensa** | 34 artículos revisados · 25 incluidos en la muestra | [Enlaces y metadatos (CSV)](datos/para-etl/prensa/referencias.csv) |
 
-## Acceso y preparación de las demás partes
+Los archivos de trabajo están en [`datos/para-etl/`](datos/para-etl/) y las copias de origen en [`datos/originales/`](datos/originales/). Puedes usar los datos descargados sin acceso a la VM.
+
+## Procedencia y acceso
+
+- **ATUS.** La ficha registra la capa, la paginación y el filtro de Mérida `EDO=31 AND MPIO=50`. [Programa ATUS](https://www.inegi.org.mx/programas/accidentes/) · [Servicio WFS](https://mapas.inegi.org.mx/geoserver/wfs) · [Ficha de descarga](datos/originales/atus/accidentes_merida.fuente.json)
+- **Marco Geoestadístico.** El manifiesto identifica las capas, la edición y las URL directas de cada geometría. [Catálogo de INEGI](https://www.inegi.org.mx/servicios/catalogounico.html) · [Manifiesto de las capas](datos/originales/marco-geoestadistico/fuentes.json)
+- **DENUE.** El extracto conserva ID, actividad, estrato, coordenadas y validación. Para actualizarlo, usar `BuscarAreaAct` con entidad `31`, municipio `050` y un token propio. [API de INEGI](https://www.inegi.org.mx/servicios/api_denue.html)
+- **SICT.** El catálogo indica licencia CC BY 4.0. El manifiesto detalla la descarga por CKAN y el filtro por Yucatán. [Datos viales](https://www.datos.gob.mx/es/dataset/datos_viales) · [Manifiesto](datos/originales/sict/provenance.json)
+- **SIEGY.** La tabla transcribe los indicadores del boletín oficial. [Boletín del Gobierno de Yucatán](https://datos.yucatan.gob.mx/storage/boletines/archivos/2025/Boletin_2025_11.pdf) · [Ficha de descarga](datos/originales/siegy/boletin_2025_11_metadata.json)
+- **Prensa.** El CSV conserva las URL por artículo, la fecha de publicación, la fecha del hecho cuando se pudo identificar y el estado de revisión. Los textos y las fotos se consultan en cada medio. [La Jornada Maya](https://www.lajornadamaya.mx/) · [Yucatán al Instante](https://www.yucatanalinstante.com/)
+
+## Fuentes en preparación
 
 | Parte | Estado y acceso |
 | --- | --- |
-| **C04 · GeoPortal de Mérida** | Consultar la capa **GENERAL → Calles** desde el [visor municipal](https://geoportal.merida.gob.mx/). La capa municipal continúa pendiente de adquisición. Para el piloto actual están disponibles ATUS y el Marco Geoestadístico de INEGI. |
-| **C05 · Solicitud gubernamental** | Borrador preparado para pedir datos de hechos viales a la [Unidad de Transparencia de la SSP Yucatán](https://transparencia.yucatan.gob.mx/ssp/unidad-transparencia). Estado: solicitud por enviar. |
-| **C07 · Datos propios** | [Plantilla de captura vacía](preparacion/encuesta/survey_template.csv) y [diccionario del instrumento](preparacion/encuesta/survey_schema.json). Pendiente de recolección de respuestas. |
-| **C08 · LiDAR** | [Índice de fichas consultadas](preparacion/lidar/indice_productos.csv), con la URL oficial por fila. La búsqueda dejó referencias documentales y sigue pendiente un producto LiDAR utilizable para Mérida. |
-| **C09 · Realidad aumentada** | [Datos derivados de tres zonas piloto](preparacion/ar/locations.json) y [método de selección](preparacion/ar/overview.json). La maqueta reutiliza ATUS y DENUE como capa de presentación. [Referencia WebXR](https://developer.mozilla.org/es/docs/Web/API/WebXR_Device_API). |
+| **GeoPortal de Mérida** | Capa **GENERAL → Calles** pendiente de adquisición. Para el piloto se puede usar la cartografía INEGI de arriba. [Visor municipal](https://geoportal.merida.gob.mx/) |
+| **Solicitud gubernamental** | Borrador preparado para solicitar registros de hechos viales. Falta presentar la solicitud. [Unidad de Transparencia de la SSP Yucatán](https://transparencia.yucatan.gob.mx/ssp/unidad-transparencia) |
+| **Datos propios** | Instrumento preparado y recolección pendiente. [Plantilla de captura vacía](preparacion/encuesta/survey_template.csv) · [Diccionario del instrumento](preparacion/encuesta/survey_schema.json) |
+| **LiDAR** | Búsqueda documentada. Falta un producto utilizable para Mérida. [Índice de fichas con enlaces oficiales](preparacion/lidar/indice_productos.csv) |
+| **Realidad aumentada** | Prototipo de presentación de tres zonas con datos derivados de ATUS y DENUE. [Datos de las zonas](preparacion/ar/locations.json) · [Método de selección](preparacion/ar/overview.json) · [WebXR](https://developer.mozilla.org/es/docs/Web/API/WebXR_Device_API) |
 
-## Para unir los datos
+## Claves para el ETL
 
-1. Leer `OID` como identificador del accidente en ATUS. Mantener los códigos originales y los valores desconocidos. Para repartir registros por AGEB, usar las asignaciones únicas del CSV enriquecido y conservar los estados de coincidencia para reportar la cobertura.
-2. Relacionar DENUE por ubicación y documentar el desfase entre la edición 2026 y los accidentes 2021–2024. En SICT, conservar año, distancia y el control de coordenadas. La cercanía de un aforo se usa como contexto exploratorio.
-3. Mantener SIEGY por indicador, periodo y territorio. Un valor estatal repetido al cruzar con ATUS se sigue interpretando como un solo valor agregado. En prensa, distinguir la fecha de publicación de la fecha del hecho y conservar el estado de revisión.
+1. **ATUS y geografía.** Usa `OID` como identificador del registro. Para contar accidentes por AGEB, usa las asignaciones únicas y reporta la cobertura de esa unión. Conserva los códigos originales y los valores desconocidos.
+2. **DENUE y SICT.** Usa DENUE 2026 como contexto espacial para ATUS 2021–2024. Para los aforos, conserva el año, la distancia y el estado de validación de las coordenadas. [Validación SICT](datos/para-etl/sict/validacion.json)
+3. **SIEGY y prensa.** Mantén cada indicador SIEGY en su periodo y territorio. Cuenta un valor estatal una sola vez aunque aparezca en varios registros tras una unión. En prensa, distingue la fecha de publicación de la fecha del hecho.
 
-Los conteos describen las fuentes disponibles. Las concentraciones espaciales y las coincidencias por cercanía se usan para explorar patrones.
+La portada se generó con las ubicaciones ATUS y el Marco Geoestadístico de INEGI. Cada punto del mapa marca una ubicación en la que puede haber varios registros.
 
