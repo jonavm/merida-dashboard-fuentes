@@ -1,0 +1,228 @@
+{
+  "status": "complete",
+  "dataset_name": "Datos viales",
+  "dataset_id": "61092ad4-8d85-45ec-bc07-e0dab733092b",
+  "resource_id": "31babb3f-449a-44b6-914a-3ec405d06adb",
+  "resource_name": "Datos viales (2013-2024)",
+  "institution": "Secretaría de Infraestructura, Comunicaciones y Transportes (SICT)",
+  "catalog_page": "https://www.datos.gob.mx/es/dataset/datos_viales",
+  "resource_url": "https://repodatos.atdt.gob.mx/api_update/secretaria_comunicaciones/datos_viales/Datos_viales_2013_2024.csv",
+  "acquisition_service": "https://www.datos.gob.mx/api/3/action/datastore_search",
+  "acquired_at": "2026-09-30T23:39:20.865761+00:00",
+  "completed_at": "2026-09-30T23:39:31.604848+00:00",
+  "catalog_format": "CSV",
+  "acquired_format": "JSON CKAN DataStore responses",
+  "catalog_period": "2013–2024",
+  "license": "CC-BY-4.0",
+  "metadata_modified": "2026-04-16T16:33:24.542805",
+  "record_count": 4169,
+  "query_parameters": {
+    "resource_id": "31babb3f-449a-44b6-914a-3ec405d06adb",
+    "filters": "{\"estado\": \"Yucatan\"}",
+    "limit": 500
+  },
+  "page_size": 500,
+  "files": [
+    {
+      "file": "package_before.json",
+      "sha256": "a0211e801664b654abf776c95b8648d14baeee920838b74d2094055de28f8122",
+      "bytes": 8316,
+      "url": "https://www.datos.gob.mx/api/3/action/package_show?id=61092ad4-8d85-45ec-bc07-e0dab733092b",
+      "status": 200,
+      "queried_at": "2026-09-30T23:39:20.865761+00:00",
+      "params": {
+        "id": "61092ad4-8d85-45ec-bc07-e0dab733092b"
+      },
+      "content_type": "application/json;charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    {
+      "file": "page_000000.json",
+      "sha256": "17bcfbcd497e0e7df4e2ead395365f456742654975660073e58afbf120b96376",
+      "bytes": 209240,
+      "url": "https://www.datos.gob.mx/api/3/action/datastore_search?resource_id=31babb3f-449a-44b6-914a-3ec405d06adb&filters=%7B%22estado%22%3A+%22Yucatan%22%7D&limit=500&offset=0",
+      "status": 200,
+      "queried_at": "2026-09-30T23:39:21.693191+00:00",
+      "params": {
+        "resource_id": "31babb3f-449a-44b6-914a-3ec405d06adb",
+        "filters": "{\"estado\": \"Yucatan\"}",
+        "limit": 500,
+        "offset": 0
+      },
+      "content_type": "application/json;charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    {
+      "file": "page_000500.json",
+      "sha256": "b1b5c1beda84f6dca41977128fc6baae5f7f6084c85904c5afebc09d72c1b4eb",
+      "bytes": 208351,
+      "url": "https://www.datos.gob.mx/api/3/action/datastore_search?resource_id=31babb3f-449a-44b6-914a-3ec405d06adb&filters=%7B%22estado%22%3A+%22Yucatan%22%7D&limit=500&offset=500",
+      "status": 200,
+      "queried_at": "2026-09-30T23:39:22.623330+00:00",
+      "params": {
+        "resource_id": "31babb3f-449a-44b6-914a-3ec405d06adb",
+        "filters": "{\"estado\": \"Yucatan\"}",
+        "limit": 500,
+        "offset": 500
+      },
+      "content_type": "application/json;charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    {
+      "file": "page_001000.json",
+      "sha256": "f67d614c9bf24e6bb61bb47861c01bf3b8436dc2286f871f327a6731c542dd12",
+      "bytes": 208714,
+      "url": "https://www.datos.gob.mx/api/3/action/datastore_search?resource_id=31babb3f-449a-44b6-914a-3ec405d06adb&filters=%7B%22estado%22%3A+%22Yucatan%22%7D&limit=500&offset=1000",
+      "status": 200,
+      "queried_at": "2026-09-30T23:39:23.587587+00:00",
+      "params": {
+        "resource_id": "31babb3f-449a-44b6-914a-3ec405d06adb",
+        "filters": "{\"estado\": \"Yucatan\"}",
+        "limit": 500,
+        "offset": 1000
+      },
+      "content_type": "application/json;charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    {
+      "file": "page_001500.json",
+      "sha256": "5eb7458ed5fba6b0e1134e969a8869eb22cd8dadaa9f2a3b92af4fe0d0b81eb8",
+      "bytes": 208371,
+      "url": "https://www.datos.gob.mx/api/3/action/datastore_search?resource_id=31babb3f-449a-44b6-914a-3ec405d06adb&filters=%7B%22estado%22%3A+%22Yucatan%22%7D&limit=500&offset=1500",
+      "status": 200,
+      "queried_at": "2026-09-30T23:39:24.566464+00:00",
+      "params": {
+        "resource_id": "31babb3f-449a-44b6-914a-3ec405d06adb",
+        "filters": "{\"estado\": \"Yucatan\"}",
+        "limit": 500,
+        "offset": 1500
+      },
+      "content_type": "application/json;charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    {
+      "file": "page_002000.json",
+      "sha256": "0c8c3b888f75c3ddc570acd500ed6d5bc31d1d24f0ec81690b44e0203db0a458",
+      "bytes": 207527,
+      "url": "https://www.datos.gob.mx/api/3/action/datastore_search?resource_id=31babb3f-449a-44b6-914a-3ec405d06adb&filters=%7B%22estado%22%3A+%22Yucatan%22%7D&limit=500&offset=2000",
+      "status": 200,
+      "queried_at": "2026-09-30T23:39:25.550701+00:00",
+      "params": {
+        "resource_id": "31babb3f-449a-44b6-914a-3ec405d06adb",
+        "filters": "{\"estado\": \"Yucatan\"}",
+        "limit": 500,
+        "offset": 2000
+      },
+      "content_type": "application/json;charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    {
+      "file": "page_002500.json",
+      "sha256": "1686a0b444f15e7ffeef168794e472bd82b9098ca4b46bc8e4f4d4fb8b055428",
+      "bytes": 207883,
+      "url": "https://www.datos.gob.mx/api/3/action/datastore_search?resource_id=31babb3f-449a-44b6-914a-3ec405d06adb&filters=%7B%22estado%22%3A+%22Yucatan%22%7D&limit=500&offset=2500",
+      "status": 200,
+      "queried_at": "2026-09-30T23:39:26.470193+00:00",
+      "params": {
+        "resource_id": "31babb3f-449a-44b6-914a-3ec405d06adb",
+        "filters": "{\"estado\": \"Yucatan\"}",
+        "limit": 500,
+        "offset": 2500
+      },
+      "content_type": "application/json;charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    {
+      "file": "page_003000.json",
+      "sha256": "064c6023f18cdfe1aa53c18a7a1bce77b7834a4ae2e8f25aa36641e18db5f60e",
+      "bytes": 207186,
+      "url": "https://www.datos.gob.mx/api/3/action/datastore_search?resource_id=31babb3f-449a-44b6-914a-3ec405d06adb&filters=%7B%22estado%22%3A+%22Yucatan%22%7D&limit=500&offset=3000",
+      "status": 200,
+      "queried_at": "2026-09-30T23:39:27.471236+00:00",
+      "params": {
+        "resource_id": "31babb3f-449a-44b6-914a-3ec405d06adb",
+        "filters": "{\"estado\": \"Yucatan\"}",
+        "limit": 500,
+        "offset": 3000
+      },
+      "content_type": "application/json;charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    {
+      "file": "page_003500.json",
+      "sha256": "a1406a932f01abc75fdb04634e7259244e4e49583a36cd01774d8c5e0b9a982d",
+      "bytes": 208543,
+      "url": "https://www.datos.gob.mx/api/3/action/datastore_search?resource_id=31babb3f-449a-44b6-914a-3ec405d06adb&filters=%7B%22estado%22%3A+%22Yucatan%22%7D&limit=500&offset=3500",
+      "status": 200,
+      "queried_at": "2026-09-30T23:39:28.468051+00:00",
+      "params": {
+        "resource_id": "31babb3f-449a-44b6-914a-3ec405d06adb",
+        "filters": "{\"estado\": \"Yucatan\"}",
+        "limit": 500,
+        "offset": 3500
+      },
+      "content_type": "application/json;charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    {
+      "file": "page_004000.json",
+      "sha256": "a4ee43c5453f33db8aead3d4a2bb8c031a041d4b61b1c8814ccf34680b93e075",
+      "bytes": 71252,
+      "url": "https://www.datos.gob.mx/api/3/action/datastore_search?resource_id=31babb3f-449a-44b6-914a-3ec405d06adb&filters=%7B%22estado%22%3A+%22Yucatan%22%7D&limit=500&offset=4000",
+      "status": 200,
+      "queried_at": "2026-09-30T23:39:29.414588+00:00",
+      "params": {
+        "resource_id": "31babb3f-449a-44b6-914a-3ec405d06adb",
+        "filters": "{\"estado\": \"Yucatan\"}",
+        "limit": 500,
+        "offset": 4000
+      },
+      "content_type": "application/json;charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    {
+      "file": "count_after.json",
+      "sha256": "eb17ccc813aa9f321fcdc843311553e78b0896c28a15bb14181b5f1cec254080",
+      "bytes": 1557,
+      "url": "https://www.datos.gob.mx/api/3/action/datastore_search?resource_id=31babb3f-449a-44b6-914a-3ec405d06adb&filters=%7B%22estado%22%3A+%22Yucatan%22%7D&limit=0&offset=0",
+      "status": 200,
+      "queried_at": "2026-09-30T23:39:30.223344+00:00",
+      "params": {
+        "resource_id": "31babb3f-449a-44b6-914a-3ec405d06adb",
+        "filters": "{\"estado\": \"Yucatan\"}",
+        "limit": 0,
+        "offset": 0
+      },
+      "content_type": "application/json;charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    {
+      "file": "package_after.json",
+      "sha256": "a0211e801664b654abf776c95b8648d14baeee920838b74d2094055de28f8122",
+      "bytes": 8316,
+      "url": "https://www.datos.gob.mx/api/3/action/package_show?id=61092ad4-8d85-45ec-bc07-e0dab733092b",
+      "status": 200,
+      "queried_at": "2026-09-30T23:39:30.972049+00:00",
+      "params": {
+        "id": "61092ad4-8d85-45ec-bc07-e0dab733092b"
+      },
+      "content_type": "application/json;charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    }
+  ],
+  "source_crs": null,
+  "coordinate_interpretation": "Grados decimales; datum no declarado en la ficha.",
+  "snapshot_limit": "Paginación no atómica. Conteos, IDs y metadata_modified contrastados; no garantizan ausencia de cambios internos."
+}

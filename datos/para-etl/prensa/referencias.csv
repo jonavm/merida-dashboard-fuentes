@@ -1,0 +1,35 @@
+id,source,url,publication_date,event_date,status,event_type
+fa1bd109797fa3577e19e76a,La Jornada Maya,https://www.lajornadamaya.mx/yucatan/170083/mujer-muere-tras-ser-atropellada-por-camioneta-de-cfe-en-merida,2021-04-14,2021-04-14,included,atropellamiento
+c199e2d5501db6491fc17a05,La Jornada Maya,https://www.lajornadamaya.mx/yucatan/190810/vinculan-a-proceso-al-presunto-responsable-de-la-muerte-de-michelle,2022-02-27,2022-02-18,included,colision_alcance
+ce22fb4298428f27bbd613ee,La Jornada Maya,https://www.lajornadamaya.mx/yucatan/213748/mujer-fallece-en-accidente-de-transito-en-el-centro-de-merida,2023-04-20,,included,atropellamiento
+f8b0de5169da62650e4e9cf9,La Jornada Maya,https://www.lajornadamaya.mx/yucatan/216440/investigan-muerte-de-nino-que-hacia-malabares-en-calles-de-merida,2023-06-15,2023-06-13,included,atropellamiento
+19f21fad960a7785d40d7aa9,La Jornada Maya,https://www.lajornadamaya.mx/yucatan/210347/merida-exigen-investigacion-sobre-condiciones-de-unidades-del-transporte,2023-02-07,2023-01-31,included,atropellamiento
+bf863715df37c382f4e21e19,La Jornada Maya,https://www.lajornadamaya.mx/yucatan/200440/accidente-en-carretera-merida-progreso-deja-dos-personas-muertas,2022-08-01,,excluded,
+c2c91ecd309e8b2dfb93a9f5,La Jornada Maya,https://www.lajornadamaya.mx/yucatan/226184/accidentes-de-transito-principales-homicidios-en-yucatan-y-campeche-en-quintana-roo-por-arma-de-fuego,2024-01-23,,excluded,
+ca6b373a68ccb27b5798edbe,Yucatán al Instante,https://www.yucatanalinstante.com/extranjero-choca-su-camioneta-suburban-contra-un-taxi-en-el-poniente-de-merida/,2021-08-17,2021-08-16,included,colision
+66491e505a01ae30549d6c39,Yucatán al Instante,https://www.yucatanalinstante.com/camioneta-choca-por-alcance-a-un-auto-en-periferico-sur/,2024-03-14,,excluded,
+0c4f6375bc519b634aa9d400,Yucatán al Instante,https://www.yucatanalinstante.com/atropellan-a-un-hombre-mientras-esperaba-que-abrieran-la-puerta-de-su-trabajo-en-el-centro-de-merida/,2024-05-09,2024-05-08,included,colision_atropellamiento
+2604451ab21e460c71a7dbd9,Yucatán al Instante,https://www.yucatanalinstante.com/vuelca-camioneta-que-transportada-bano-portatil-en-el-centro-de-merida/,2024-06-21,,included,colision_volcadura
+73be2b2f431049f541972851,Yucatán al Instante,https://www.yucatanalinstante.com/motociclista-sale-volando-tras-choque-en-calles-del-centro-fue-enviado-al-hospital/,2021-01-16,,included,atropellamiento
+b20df1d19a92a8a794286922,Yucatán al Instante,https://www.yucatanalinstante.com/a-proceso-por-causar-la-muerte-de-un-motociclista-2/,2022-05-14,,excluded,
+21fdaa42a33bfc6950db2cf9,Yucatán al Instante,https://www.yucatanalinstante.com/muere-elemento-de-la-ssp-atropellado-por-su-companero-en-el-roble-alborada/,2021-07-17,,excluded,
+9676f7ad93ee7af0e8887b9b,Yucatán al Instante,https://www.yucatanalinstante.com/operador-de-ambulancia-de-traslado-provoca-choque-en-el-centro-de-merida/,2024-04-02,,included,choque
+9759533bac68710154597996,Yucatán al Instante,https://www.yucatanalinstante.com/camioneta-termina-dentro-de-una-tienda-tras-fuerte-accidente-en-el-centro-de-merida/,2024-11-21,2024-11-21,included,choque
+be946b6142482831f4b84d4e,Yucatán al Instante,https://www.yucatanalinstante.com/camioneta-y-una-motocicleta-deja-un-lesionado-en-el-centro-merida/,2024-12-08,,included,choque
+acb97ed5dfdb70e73d32d683,Yucatán al Instante,https://www.yucatanalinstante.com/tragedia-en-periferico-de-merida-motociclista-mata-a-ciclista/,2021-05-02,2021-05-01,included,choque
+fa7ffccc4177d2d6c74ff88c,Yucatán al Instante,https://www.yucatanalinstante.com/grua-derriba-postes-en-el-centro-de-merida/,2022-10-05,,included,derribo de postes
+3fc44b8ea12d6d6075e220d4,Yucatán al Instante,https://www.yucatanalinstante.com/abuelito-provoca-carambola-en-el-centro-de-merida/,2024-07-06,,included,choque y volcadura
+25e9b746ab6b89740f337d85,Yucatán al Instante,https://www.yucatanalinstante.com/imputado-por-danos-y-lesiones-en-accidente-vial/,2022-06-04,,excluded,
+fd7bca000977648b6c40d164,Yucatán al Instante,https://www.yucatanalinstante.com/resuelven-situacion-legal-de-involucrado-en-accidente-vial-7/,2023-02-07,,excluded,
+f76a63554b004be16dede552,Yucatán al Instante,https://www.yucatanalinstante.com/hombre-resulta-lesionado-tras-choque-en-la-avenida-merida-2000/,2021-11-26,,excluded,
+147abdcaa66866c45d42e097,Yucatán al Instante,https://www.yucatanalinstante.com/milagroso-choque-de-frente-en-la-celestun-merida/,2021-06-25,,excluded,
+b45c7a0f7f0850479eea1116,Yucatán al Instante,https://www.yucatanalinstante.com/camion-de-carga-se-queda-sin-frenos-y-choca-va-y-ven-en-periferico-de-merida/,2023-04-13,2023-04-13,included,choque
+1f0f140f2e7c7dac7d483aa4,Yucatán al Instante,https://www.yucatanalinstante.com/fuerte-accidente-en-calles-del-centro-de-merida/,2023-01-09,2023-01-09,included,choque
+aff43159340fbd92c59f4f7e,Yucatán al Instante,https://www.yucatanalinstante.com/vinculado-por-delitos-cometidos-en-accidente-vial/,2023-02-18,,included,choque
+ce85973f4bd310d7e8693513,Yucatán al Instante,https://www.yucatanalinstante.com/declarada-culpable-en-juicio-oral-por-responsabilidad-en-percance-vial/,2023-05-26,,included,choque
+bf5f8278d598514a231caaec,Yucatán al Instante,https://www.yucatanalinstante.com/imputado-por-danos-y-lesiones-ocurridos-en-un-percance-vial/,2022-12-16,2022-12-11,included,choque
+3ad85d62407f8c37a5a2ae03,La Jornada Maya,https://www.lajornadamaya.mx/yucatan/78880/muere-ciclista-atropellado-en-periferico-de-merida,2021-02-17,2021-02-17,included,atropellamiento
+1b97356ddbcce0827ddd45dd,La Jornada Maya,https://www.lajornadamaya.mx/yucatan/41536/muere-ciclista-en-accidente-de-transito-en-merida,2021-01-24,,included,atropellamiento
+ac0c26ee4e83b4efcfa121a2,La Jornada Maya,https://www.lajornadamaya.mx/yucatan/177239/accidente-vehicular-en-periferico-cuatro-muertos-y-10-heridos,2021-07-30,2021-07-30,included,choque
+dac94d36b82da62c1175bb53,La Jornada Maya,https://www.lajornadamaya.mx/yucatan/185702/trailer-choca-y-revienta-lineas-en-prolongacion-paseo-de-montejo,2021-12-03,2021-12-03,included,choque y derribo de postes
+f1139289ba84c70214da42e2,La Jornada Maya,https://www.lajornadamaya.mx/yucatan/176338/elemento-de-ssp-muere-al-prestar-un-auxilio-en-merida,2021-07-17,2021-07-17,included,atropellamiento

@@ -1,0 +1,29 @@
+{
+  "chapter": "09",
+  "pilot_id": "G_1138_11614",
+  "selection_rule": "Tres celdas de 200 m con más registros ATUS, con contexto DENUE a 500 m; desempate por identificador ascendente. Centro geométrico de cada celda, no una intersección verificada ni una muestra representativa.",
+  "metric_crs": "EPSG:32616",
+  "published_crs": "EPSG:4326",
+  "cell_side_m": 200,
+  "radii_m": [
+    100,
+    300,
+    500
+  ],
+  "atus_period": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "denue_edition": "2026/05; corrección 2026-07-01",
+  "limits": [
+    "Una celda no acredita una intersección física única; nombres ATUS son referencias textuales.",
+    "DENUE 2026 y ATUS 2021–2024 tienen desfase temporal; establecimientos no explican causas.",
+    "Distancias planas EPSG:32616 al centro de la celda; no son rutas ni distancia al dispositivo.",
+    "Escena conceptual sin red vial, edificios, alturas ni LiDAR; posiciones relativas sí derivan de coordenadas.",
+    "WebXR presenta un panel frente al visor, sin anclaje geográfico ni calibración sobre la calle.",
+    "SICT: datum no declarado; cercanía exploratoria no prueba misma vía ni exposición.",
+    "Sin navegación, tráfico en tiempo real, predicción o atribución causal."
+  ]
+}

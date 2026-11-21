@@ -1,0 +1,19 @@
+{
+  "url": "https://mapas.inegi.org.mx/geoserver/wfs",
+  "parametros": {
+    "service": "WFS",
+    "version": "2.0.0",
+    "request": "GetFeature",
+    "typeNames": "Sitio_Inegi:atus_tipoaccid",
+    "outputFormat": "application/json",
+    "srsName": "EPSG:4326",
+    "CQL_FILTER": "EDO=31 AND MPIO=50",
+    "sortBy": "OID A"
+  },
+  "consulta_utc": "2026-09-23T02:05:12.411465+00:00",
+  "numberMatched": 8815,
+  "paginas": 9,
+  "count": 1000,
+  "sha256": "be3a3bd5ed85b51558e8a94a3ea36b0dd20bd9859fd2f808616aea7e72ad514d",
+  "nota": "Colección ensamblada de páginas WFS; propiedades y geometrías originales sin transformación."
+}

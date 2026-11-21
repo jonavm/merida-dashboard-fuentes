@@ -1,0 +1,420 @@
+{
+  "records_raw": 4169,
+  "records_processed": 4169,
+  "deleted_records": 0,
+  "duplicate_ids": 0,
+  "duplicate_content_excluding_id": 0,
+  "checks": [
+    {
+      "check": "required_columns",
+      "passed": true,
+      "message": "Todas las columnas requeridas están presentes.",
+      "details": {
+        "required_columns": [
+          "_id",
+          "estado",
+          "carretera",
+          "punto_generador",
+          "latitud",
+          "longitud",
+          "ejercicio",
+          "tdpa"
+        ],
+        "missing_columns": []
+      }
+    },
+    {
+      "check": "duplicates",
+      "passed": true,
+      "message": "No hay duplicados en las claves indicadas.",
+      "details": {
+        "keys": [
+          "_id"
+        ],
+        "duplicate_records": 0,
+        "null_key_records": 0,
+        "allow_null_keys": false
+      }
+    },
+    {
+      "check": "record_count",
+      "passed": true,
+      "message": "Se encontraron 4169 registros.",
+      "details": {
+        "record_count": 4169,
+        "min_records": 1,
+        "expected_records": 4169
+      }
+    },
+    {
+      "check": "null_values",
+      "passed": true,
+      "message": "Los nulos cumplen el límite definido.",
+      "details": {
+        "null_counts": {
+          "_id": 0,
+          "estado": 0,
+          "carretera": 0,
+          "clave": 0,
+          "ruta": 0,
+          "punto_generador": 0,
+          "km": 0,
+          "te": 344,
+          "sc": 344,
+          "tdpa": 0,
+          "m": 344,
+          "a": 344,
+          "b": 344,
+          "c2": 344,
+          "c3": 344,
+          "t3s2": 344,
+          "t3s3": 344,
+          "t3s2r4": 344,
+          "otros": 344,
+          "aa": 344,
+          "bb": 344,
+          "cc": 344,
+          "k": 344,
+          "d": 344,
+          "latitud": 344,
+          "longitud": 344,
+          "ejercicio": 0
+        },
+        "limits": {
+          "_id": 4169,
+          "estado": 4169,
+          "carretera": 4169,
+          "clave": 4169,
+          "ruta": 4169,
+          "punto_generador": 4169,
+          "km": 4169,
+          "te": 4169,
+          "sc": 4169,
+          "tdpa": 4169,
+          "m": 4169,
+          "a": 4169,
+          "b": 4169,
+          "c2": 4169,
+          "c3": 4169,
+          "t3s2": 4169,
+          "t3s3": 4169,
+          "t3s2r4": 4169,
+          "otros": 4169,
+          "aa": 4169,
+          "bb": 4169,
+          "cc": 4169,
+          "k": 4169,
+          "d": 4169,
+          "latitud": 4169,
+          "longitud": 4169,
+          "ejercicio": 4169
+        },
+        "exceeded": {},
+        "missing_columns": []
+      }
+    },
+    {
+      "check": "latitude_range",
+      "passed": false,
+      "message": "Hay coordenadas vacías, no numéricas o fuera de rango.",
+      "details": {
+        "column": "latitud",
+        "valid_range": [
+          -90,
+          90
+        ],
+        "null_records": 344,
+        "non_numeric_records": 0,
+        "out_of_range_records": 21,
+        "allow_nulls": true
+      }
+    },
+    {
+      "check": "longitude_range",
+      "passed": true,
+      "message": "Las coordenadas están dentro del rango esperado.",
+      "details": {
+        "column": "longitud",
+        "valid_range": [
+          -180,
+          180
+        ],
+        "null_records": 344,
+        "non_numeric_records": 0,
+        "out_of_range_records": 0,
+        "allow_nulls": true
+      }
+    },
+    {
+      "check": "data_types",
+      "passed": true,
+      "message": "Los tipos de datos cumplen el contrato.",
+      "details": {
+        "expected_types": {
+          "year_numeric": "integer",
+          "latitud_numeric": "numeric",
+          "longitud_numeric": "numeric"
+        },
+        "actual_types": {
+          "year_numeric": "Int64",
+          "latitud_numeric": "Float64",
+          "longitud_numeric": "Float64"
+        },
+        "missing_columns": [],
+        "mismatches": {}
+      }
+    },
+    {
+      "check": "join_keys",
+      "passed": true,
+      "message": "Las claves están completas y son aptas para la unión.",
+      "details": {
+        "keys": [
+          "source_record_id"
+        ],
+        "source_null_key_records": 0,
+        "source_duplicate_key_records": 0,
+        "require_unique": true
+      }
+    },
+    {
+      "check": "crs",
+      "passed": false,
+      "message": "La fuente no declara un CRS.",
+      "details": {
+        "declared_crs": null
+      }
+    }
+  ],
+  "numeric_issues": {
+    "km": {
+      "missing_original": 0,
+      "non_numeric_nonblank": 0
+    },
+    "te": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "sc": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "tdpa": {
+      "missing_original": 0,
+      "non_numeric_nonblank": 344
+    },
+    "m": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "a": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "b": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "c2": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "c3": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "t3s2": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "t3s3": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "t3s2r4": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "otros": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "aa": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "bb": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "cc": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "k": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "d": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "latitud": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    },
+    "longitud": {
+      "missing_original": 344,
+      "non_numeric_nonblank": 0
+    }
+  },
+  "coordinate_records_valid": 3804,
+  "coordinate_records_unusable": 365,
+  "coordinate_records_region_plausible": 3512,
+  "coordinate_records_region_unusable": 657,
+  "coordinate_screen": "Rango global y hemisferios norte/oeste necesarios para Yucatán; no prueba pertenencia a la entidad. Coordenadas posiblemente invertidas se conservan sin corregir.",
+  "records_inside_merida": 292,
+  "records_outside_merida_or_unlocated": 3877,
+  "states": {
+    "Yucatan": 4169
+  },
+  "years": {
+    "2013": 335,
+    "2014": 337,
+    "2015": 341,
+    "2016": 344,
+    "2017": 346,
+    "2018": 347,
+    "2019": 384,
+    "2020": 390,
+    "2021": 389,
+    "2022": 429,
+    "2023": 427,
+    "2024": 100
+  },
+  "year_invalid_or_outside_period": 0,
+  "categorical_values": {
+    "te": [
+      {
+        "value": "3.0",
+        "records": 1920
+      },
+      {
+        "value": "1.0",
+        "records": 1903
+      },
+      {
+        "value": null,
+        "records": 344
+      },
+      {
+        "value": "2.0",
+        "records": 2
+      }
+    ],
+    "sc": [
+      {
+        "value": "0.0",
+        "records": 2599
+      },
+      {
+        "value": "1.0",
+        "records": 615
+      },
+      {
+        "value": "2.0",
+        "records": 611
+      },
+      {
+        "value": null,
+        "records": 344
+      }
+    ],
+    "ruta": [
+      {
+        "value": "MEX-180",
+        "records": 1146
+      },
+      {
+        "value": "YUC",
+        "records": 989
+      },
+      {
+        "value": "MEX-261",
+        "records": 329
+      },
+      {
+        "value": "MEX-184",
+        "records": 323
+      },
+      {
+        "value": "MEX-176",
+        "records": 274
+      },
+      {
+        "value": "MEX-295",
+        "records": 242
+      },
+      {
+        "value": "MEX-281",
+        "records": 186
+      },
+      {
+        "value": "YUC-018",
+        "records": 150
+      },
+      {
+        "value": "MEX-180D",
+        "records": 114
+      },
+      {
+        "value": "YUC-027",
+        "records": 88
+      },
+      {
+        "value": "MEX",
+        "records": 55
+      },
+      {
+        "value": "YUC-011",
+        "records": 55
+      },
+      {
+        "value": "MEX-YUC",
+        "records": 43
+      },
+      {
+        "value": "YUC-172",
+        "records": 33
+      },
+      {
+        "value": "YUC-031",
+        "records": 33
+      },
+      {
+        "value": "YUC-013",
+        "records": 22
+      },
+      {
+        "value": "YUC-289",
+        "records": 22
+      },
+      {
+        "value": "YUC-081",
+        "records": 22
+      },
+      {
+        "value": "YUC-281",
+        "records": 22
+      },
+      {
+        "value": "YUC-MEX-180",
+        "records": 21
+      }
+    ]
+  },
+  "numeric_decision": "Originales intactos. Conversiones fallidas quedan nulas en columnas *_numeric; no imputar ni eliminar filas.",
+  "crs_decision": "Fuente no declara datum/CRS: control CRS falla explícitamente. EPSG:4326 es una interpretación operativa para exploración, no certificación del dato.",
+  "boundary_sha256": "0a01e74dce35019908a684db42e86d943e1d5d284c4511580833c19513b6113a",
+  "geographic_decision": "Dentro de Mérida es una bandera espacial usando límite INEGI diciembre 2025 existente, no clave municipal suministrada por SICT. No se excluyen aforos vecinos de Yucatán."
+}

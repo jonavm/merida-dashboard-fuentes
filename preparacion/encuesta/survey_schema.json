@@ -1,0 +1,811 @@
+{
+  "dictionary_format": "own-data-survey-design",
+  "schema_version": 1,
+  "instrument_id": "c07-own-data-survey-v1",
+  "prepared_on": "2026-10-07",
+  "status": "capture_prepared",
+  "collection_authorized": false,
+  "remote_form_created": false,
+  "visualizations_implemented": false,
+  "research_question": "¿Qué lugares y situaciones perciben las personas participantes como más complicados o inseguros al moverse por Mérida?",
+  "unit": "Envío voluntario elegible, no persona identificada ni accidente único.",
+  "sampling": "No probabilístico, por conveniencia y voluntario; no representativo de Mérida.",
+  "csv": {
+    "encoding": "UTF-8",
+    "delimiter": ",",
+    "header": true,
+    "missing_value": "",
+    "column_order": [
+      "RESPONSE_ID",
+      "SURVEY_VERSION",
+      "CAPTURE_CHANNEL",
+      "CONSENT",
+      "AGE_RANGE",
+      "TRAVEL_FREQUENCY",
+      "TRANSPORT_MODE",
+      "AREA_OR_ZONE",
+      "DIFFICULT_INTERSECTION",
+      "TIME_OF_DAY",
+      "MAIN_PROBLEM",
+      "SIGNALING_RATING",
+      "LIGHTING_RATING",
+      "TRAFFIC_RATING",
+      "SPEED_RATING",
+      "NEAR_MISS_EXPERIENCE",
+      "ACCIDENT_EXPERIENCE",
+      "OPEN_COMMENT"
+    ],
+    "template_contains_responses": false,
+    "text_newlines": "Usar comillas CSV; no agregar columnas por comas o saltos de línea."
+  },
+  "technical_fields": [
+    {
+      "field": "RESPONSE_ID",
+      "csv_type": "string",
+      "required_in_study_csv": true,
+      "meaning": "UUID aleatorio interno para un envío real; no identifica ni deduplica personas. Reimportar mismo envío preserva ID por registro de lote/orden, sin usar contenido como identidad."
+    },
+    {
+      "field": "SURVEY_VERSION",
+      "csv_type": "string",
+      "required_in_study_csv": true,
+      "constant": "c07-own-data-survey-v1",
+      "meaning": "Versión del instrumento aplicada al envío real."
+    },
+    {
+      "field": "CAPTURE_CHANNEL",
+      "csv_type": "string",
+      "required_in_study_csv": true,
+      "choices": [
+        {
+          "code": "google_forms",
+          "label": "Google Forms autoadministrado"
+        },
+        {
+          "code": "google_forms_assisted",
+          "label": "Google Forms asistido con el mismo guion"
+        },
+        {
+          "code": "web_form",
+          "label": "Formulario web alternativo, si se autoriza después"
+        }
+      ],
+      "meaning": "Método de captura; no canal de identidad ni cuenta de participante."
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "field": "CONSENT",
+      "prompt": "¿Aceptas participar en los términos descritos y confirmas que tienes 18 años o más?",
+      "capture_type": "single_choice",
+      "csv_type": "string",
+      "required_in_form": true,
+      "empty_allowed_in_study_csv": false,
+      "choices": [
+        {
+          "code": "yes",
+          "label": "Sí, confirmo y acepto"
+        },
+        {
+          "code": "no",
+          "label": "No"
+        }
+      ],
+      "stop_codes": [
+        "no"
+      ],
+      "study_allowed_codes": [
+        "yes"
+      ]
+    },
+    {
+      "number": 2,
+      "field": "AGE_RANGE",
+      "prompt": "¿En qué rango de edad te encuentras?",
+      "capture_type": "single_choice",
+      "csv_type": "string",
+      "required_in_form": true,
+      "empty_allowed_in_study_csv": false,
+      "choices": [
+        {
+          "code": "under_18",
+          "label": "Menor de 18"
+        },
+        {
+          "code": "18_24",
+          "label": "18–24"
+        },
+        {
+          "code": "25_34",
+          "label": "25–34"
+        },
+        {
+          "code": "35_44",
+          "label": "35–44"
+        },
+        {
+          "code": "45_59",
+          "label": "45–59"
+        },
+        {
+          "code": "60_plus",
+          "label": "60 o más"
+        },
+        {
+          "code": "prefer_not_to_answer",
+          "label": "Prefiero no responder"
+        }
+      ],
+      "stop_codes": [
+        "under_18"
+      ],
+      "adult_declaration_from": "CONSENT=yes"
+    },
+    {
+      "number": 3,
+      "field": "TRAVEL_FREQUENCY",
+      "prompt": "¿En cuántos días de los últimos 30 días circulaste por el municipio de Mérida?",
+      "capture_type": "single_choice",
+      "csv_type": "string",
+      "required_in_form": true,
+      "empty_allowed_in_study_csv": false,
+      "choices": [
+        {
+          "code": "none",
+          "label": "Ningún día"
+        },
+        {
+          "code": "days_1_3",
+          "label": "1–3 días"
+        },
+        {
+          "code": "days_4_9",
+          "label": "4–9 días"
+        },
+        {
+          "code": "days_10_19",
+          "label": "10–19 días"
+        },
+        {
+          "code": "days_20_30",
+          "label": "20–30 días"
+        },
+        {
+          "code": "do_not_remember",
+          "label": "No recuerdo"
+        },
+        {
+          "code": "prefer_not_to_answer",
+          "label": "Prefiero no responder"
+        }
+      ],
+      "stop_codes": [
+        "none",
+        "do_not_remember",
+        "prefer_not_to_answer"
+      ],
+      "reference_days": 30,
+      "eligibility_codes": [
+        "days_1_3",
+        "days_4_9",
+        "days_10_19",
+        "days_20_30"
+      ]
+    },
+    {
+      "number": 4,
+      "field": "TRANSPORT_MODE",
+      "prompt": "¿Con qué modo circulaste más días por Mérida en ese periodo?",
+      "capture_type": "single_choice",
+      "csv_type": "string",
+      "required_in_form": false,
+      "empty_allowed_in_study_csv": true,
+      "choices": [
+        {
+          "code": "walking",
+          "label": "A pie"
+        },
+        {
+          "code": "bicycle",
+          "label": "Bicicleta"
+        },
+        {
+          "code": "motorcycle",
+          "label": "Motocicleta"
+        },
+        {
+          "code": "car_driver",
+          "label": "Automóvil como conductor"
+        },
+        {
+          "code": "car_passenger",
+          "label": "Automóvil como pasajero"
+        },
+        {
+          "code": "public_transport",
+          "label": "Transporte público"
+        },
+        {
+          "code": "taxi_app",
+          "label": "Taxi o transporte por aplicación"
+        },
+        {
+          "code": "personal_adapted_mobility",
+          "label": "Dispositivo de movilidad personal o adaptada"
+        },
+        {
+          "code": "other",
+          "label": "Otro"
+        },
+        {
+          "code": "prefer_not_to_answer",
+          "label": "Prefiero no responder"
+        }
+      ],
+      "reference_days": 30,
+      "tie_rule": "Más recorridos; si persiste empate, elegir un modo como referencia."
+    },
+    {
+      "number": 5,
+      "field": "AREA_OR_ZONE",
+      "prompt": "¿En qué zona general se encuentra el lugar o recorrido que tomarás como referencia?",
+      "capture_type": "single_choice",
+      "csv_type": "string",
+      "required_in_form": false,
+      "empty_allowed_in_study_csv": true,
+      "choices": [
+        {
+          "code": "center",
+          "label": "Centro"
+        },
+        {
+          "code": "north",
+          "label": "Norte"
+        },
+        {
+          "code": "south",
+          "label": "Sur"
+        },
+        {
+          "code": "east",
+          "label": "Oriente"
+        },
+        {
+          "code": "west",
+          "label": "Poniente"
+        },
+        {
+          "code": "peripheral_access",
+          "label": "Periférico o accesos"
+        },
+        {
+          "code": "municipal_localities",
+          "label": "Comisarías del municipio"
+        },
+        {
+          "code": "multiple_zones",
+          "label": "Varias zonas"
+        },
+        {
+          "code": "cannot_identify",
+          "label": "No puedo identificarla"
+        },
+        {
+          "code": "prefer_not_to_answer",
+          "label": "Prefiero no responder"
+        }
+      ],
+      "geography": "Orientación subjetiva, sin límites oficiales ni domicilio."
+    },
+    {
+      "number": 6,
+      "field": "DIFFICULT_INTERSECTION",
+      "prompt": "Si hay un lugar público que te resulte especialmente complicado, ¿qué cruce o tramo es?",
+      "capture_type": "short_text",
+      "csv_type": "string",
+      "required_in_form": false,
+      "empty_allowed_in_study_csv": true,
+      "choices": [],
+      "max_characters": 160,
+      "max_requested_places": 1,
+      "instructions": "Hasta un lugar público. Sin dirección privada, coordenadas ni rutas personales. Dejar vacío si no hay un lugar recordado."
+    },
+    {
+      "number": 7,
+      "field": "TIME_OF_DAY",
+      "prompt": "¿En qué franja te resultó más complicado desplazarte en ese lugar o zona?",
+      "capture_type": "single_choice",
+      "csv_type": "string",
+      "required_in_form": false,
+      "empty_allowed_in_study_csv": true,
+      "choices": [
+        {
+          "code": "late_night",
+          "label": "Madrugada 00:00–05:59"
+        },
+        {
+          "code": "morning",
+          "label": "Mañana 06:00–11:59"
+        },
+        {
+          "code": "afternoon",
+          "label": "Tarde 12:00–17:59"
+        },
+        {
+          "code": "night",
+          "label": "Noche 18:00–23:59"
+        },
+        {
+          "code": "no_specific_period",
+          "label": "Sin franja particular"
+        },
+        {
+          "code": "do_not_remember",
+          "label": "No recuerdo"
+        },
+        {
+          "code": "prefer_not_to_answer",
+          "label": "Prefiero no responder"
+        }
+      ],
+      "meaning": "Franja de dificultad percibida, no hora de un accidente.",
+      "hour_intervals": {
+        "late_night": [
+          0,
+          6
+        ],
+        "morning": [
+          6,
+          12
+        ],
+        "afternoon": [
+          12,
+          18
+        ],
+        "night": [
+          18,
+          24
+        ]
+      },
+      "interval_rule": "Hora inicial incluida, final excluida."
+    },
+    {
+      "number": 8,
+      "field": "MAIN_PROBLEM",
+      "prompt": "¿Cuál fue el principal problema percibido en ese lugar o zona?",
+      "capture_type": "single_choice",
+      "csv_type": "string",
+      "required_in_form": false,
+      "empty_allowed_in_study_csv": true,
+      "choices": [
+        {
+          "code": "other_users_behavior",
+          "label": "Maniobras/conducta de otras personas usuarias"
+        },
+        {
+          "code": "crossing_difficulty",
+          "label": "Cruce difícil para peatones o ciclistas"
+        },
+        {
+          "code": "signaling",
+          "label": "Señalización insuficiente/confusa"
+        },
+        {
+          "code": "lighting",
+          "label": "Iluminación insuficiente"
+        },
+        {
+          "code": "traffic",
+          "label": "Mucho tráfico"
+        },
+        {
+          "code": "speed",
+          "label": "Velocidad percibida de vehículos"
+        },
+        {
+          "code": "road_obstacles",
+          "label": "Estado de la vía u obstáculos"
+        },
+        {
+          "code": "other",
+          "label": "Otro"
+        },
+        {
+          "code": "none",
+          "label": "Ningún problema"
+        },
+        {
+          "code": "do_not_remember",
+          "label": "No recuerdo"
+        },
+        {
+          "code": "prefer_not_to_answer",
+          "label": "Prefiero no responder"
+        }
+      ],
+      "max_selections": 1,
+      "other_explanation_field": "OPEN_COMMENT"
+    },
+    {
+      "number": 9,
+      "field": "SIGNALING_RATING",
+      "prompt": "¿Cuánta dificultad te genera la señalización para desplazarte en ese lugar o zona?",
+      "capture_type": "ordinal_single_choice",
+      "csv_type": "string",
+      "required_in_form": false,
+      "empty_allowed_in_study_csv": true,
+      "choices": [
+        {
+          "code": "1",
+          "label": "Ninguna dificultad"
+        },
+        {
+          "code": "2",
+          "label": "Poca dificultad"
+        },
+        {
+          "code": "3",
+          "label": "Dificultad moderada"
+        },
+        {
+          "code": "4",
+          "label": "Bastante dificultad"
+        },
+        {
+          "code": "5",
+          "label": "Mucha dificultad"
+        },
+        {
+          "code": "not_applicable",
+          "label": "No aplica"
+        },
+        {
+          "code": "cannot_rate",
+          "label": "No puedo valorar"
+        },
+        {
+          "code": "prefer_not_to_answer",
+          "label": "Prefiero no responder"
+        }
+      ],
+      "ordinal_codes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "higher_value": "Más dificultad percibida; no magnitud física."
+    },
+    {
+      "number": 10,
+      "field": "LIGHTING_RATING",
+      "prompt": "¿Cuánta dificultad te genera la iluminación al desplazarte allí cuando está oscuro?",
+      "capture_type": "ordinal_single_choice",
+      "csv_type": "string",
+      "required_in_form": false,
+      "empty_allowed_in_study_csv": true,
+      "choices": [
+        {
+          "code": "1",
+          "label": "Ninguna dificultad"
+        },
+        {
+          "code": "2",
+          "label": "Poca dificultad"
+        },
+        {
+          "code": "3",
+          "label": "Dificultad moderada"
+        },
+        {
+          "code": "4",
+          "label": "Bastante dificultad"
+        },
+        {
+          "code": "5",
+          "label": "Mucha dificultad"
+        },
+        {
+          "code": "not_applicable",
+          "label": "No aplica"
+        },
+        {
+          "code": "cannot_rate",
+          "label": "No puedo valorar"
+        },
+        {
+          "code": "prefer_not_to_answer",
+          "label": "Prefiero no responder"
+        }
+      ],
+      "ordinal_codes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "higher_value": "Más dificultad percibida; no magnitud física."
+    },
+    {
+      "number": 11,
+      "field": "TRAFFIC_RATING",
+      "prompt": "¿Cuánta dificultad te genera el volumen de tráfico al desplazarte allí?",
+      "capture_type": "ordinal_single_choice",
+      "csv_type": "string",
+      "required_in_form": false,
+      "empty_allowed_in_study_csv": true,
+      "choices": [
+        {
+          "code": "1",
+          "label": "Ninguna dificultad"
+        },
+        {
+          "code": "2",
+          "label": "Poca dificultad"
+        },
+        {
+          "code": "3",
+          "label": "Dificultad moderada"
+        },
+        {
+          "code": "4",
+          "label": "Bastante dificultad"
+        },
+        {
+          "code": "5",
+          "label": "Mucha dificultad"
+        },
+        {
+          "code": "not_applicable",
+          "label": "No aplica"
+        },
+        {
+          "code": "cannot_rate",
+          "label": "No puedo valorar"
+        },
+        {
+          "code": "prefer_not_to_answer",
+          "label": "Prefiero no responder"
+        }
+      ],
+      "ordinal_codes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "higher_value": "Más dificultad percibida; no magnitud física."
+    },
+    {
+      "number": 12,
+      "field": "SPEED_RATING",
+      "prompt": "¿Cuánta dificultad te genera la velocidad que percibes en los vehículos al desplazarte allí?",
+      "capture_type": "ordinal_single_choice",
+      "csv_type": "string",
+      "required_in_form": false,
+      "empty_allowed_in_study_csv": true,
+      "choices": [
+        {
+          "code": "1",
+          "label": "Ninguna dificultad"
+        },
+        {
+          "code": "2",
+          "label": "Poca dificultad"
+        },
+        {
+          "code": "3",
+          "label": "Dificultad moderada"
+        },
+        {
+          "code": "4",
+          "label": "Bastante dificultad"
+        },
+        {
+          "code": "5",
+          "label": "Mucha dificultad"
+        },
+        {
+          "code": "not_applicable",
+          "label": "No aplica"
+        },
+        {
+          "code": "cannot_rate",
+          "label": "No puedo valorar"
+        },
+        {
+          "code": "prefer_not_to_answer",
+          "label": "Prefiero no responder"
+        }
+      ],
+      "ordinal_codes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "higher_value": "Más dificultad percibida; no magnitud física."
+    },
+    {
+      "number": 13,
+      "field": "NEAR_MISS_EXPERIENCE",
+      "prompt": "En los últimos 90 días en Mérida, ¿en cuántas ocasiones estuviste a punto de chocar, caer o ser atropellado al desplazarte, pero el hecho no se concretó?",
+      "capture_type": "single_choice",
+      "csv_type": "string",
+      "required_in_form": false,
+      "empty_allowed_in_study_csv": true,
+      "choices": [
+        {
+          "code": "none",
+          "label": "Ninguna"
+        },
+        {
+          "code": "once",
+          "label": "1 ocasión"
+        },
+        {
+          "code": "two_three",
+          "label": "2–3 ocasiones"
+        },
+        {
+          "code": "four_or_more",
+          "label": "4 o más ocasiones"
+        },
+        {
+          "code": "do_not_remember",
+          "label": "No recuerdo"
+        },
+        {
+          "code": "prefer_not_to_answer",
+          "label": "Prefiero no responder"
+        }
+      ],
+      "reference_days": 90,
+      "meaning": "Casi accidente autodeclarado; no ligado al lugar, modo o franja de Q4–Q7."
+    },
+    {
+      "number": 14,
+      "field": "ACCIDENT_EXPERIENCE",
+      "prompt": "En los últimos 90 días en Mérida, ¿en cuántas ocasiones estuviste involucrado en un choque, caída o atropellamiento durante un desplazamiento?",
+      "capture_type": "single_choice",
+      "csv_type": "string",
+      "required_in_form": false,
+      "empty_allowed_in_study_csv": true,
+      "choices": [
+        {
+          "code": "none",
+          "label": "Ninguna"
+        },
+        {
+          "code": "once",
+          "label": "1 ocasión"
+        },
+        {
+          "code": "two_three",
+          "label": "2–3 ocasiones"
+        },
+        {
+          "code": "four_or_more",
+          "label": "4 o más ocasiones"
+        },
+        {
+          "code": "do_not_remember",
+          "label": "No recuerdo"
+        },
+        {
+          "code": "prefer_not_to_answer",
+          "label": "Prefiero no responder"
+        }
+      ],
+      "reference_days": 90,
+      "meaning": "Experiencia autodeclarada, sin verificación ni homologación ATUS."
+    },
+    {
+      "number": 15,
+      "field": "OPEN_COMMENT",
+      "prompt": "¿Quieres añadir algún comentario sobre qué facilitaría tus recorridos o explicar «Otro»?",
+      "capture_type": "paragraph_text",
+      "csv_type": "string",
+      "required_in_form": false,
+      "empty_allowed_in_study_csv": true,
+      "choices": [],
+      "max_characters": 400,
+      "instructions": "No incluir nombres, teléfonos, correos, placas, domicilios, acusaciones identificables ni datos médicos. No publicación literal."
+    }
+  ],
+  "form_sections": [
+    {
+      "id": "consent",
+      "question_numbers": [
+        1
+      ]
+    },
+    {
+      "id": "age",
+      "question_numbers": [
+        2
+      ]
+    },
+    {
+      "id": "frequency",
+      "question_numbers": [
+        3
+      ]
+    },
+    {
+      "id": "perceptions",
+      "question_numbers": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "experiences",
+      "question_numbers": [
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "id": "end_ineligible",
+      "question_numbers": []
+    }
+  ],
+  "form_settings": {
+    "collect_email": false,
+    "require_sign_in": false,
+    "limit_one_response_via_account": false,
+    "publish_response_summary": false,
+    "file_uploads": false,
+    "geolocation": false,
+    "preselected_answers": false
+  },
+  "quality": {
+    "no_imputation": true,
+    "no_identity_matching": true,
+    "retain_eligible_partial_responses": true,
+    "identical_answers_prove_duplicate_person": false,
+    "at_least_one_substantive_answer_fields": [
+      "TRANSPORT_MODE",
+      "AREA_OR_ZONE",
+      "DIFFICULT_INTERSECTION",
+      "TIME_OF_DAY",
+      "MAIN_PROBLEM",
+      "SIGNALING_RATING",
+      "LIGHTING_RATING",
+      "TRAFFIC_RATING",
+      "SPEED_RATING",
+      "NEAR_MISS_EXPERIENCE",
+      "ACCIDENT_EXPERIENCE",
+      "OPEN_COMMENT"
+    ],
+    "non_substantive_codes": [
+      "prefer_not_to_answer",
+      "do_not_remember",
+      "cannot_identify",
+      "cannot_rate",
+      "not_applicable"
+    ],
+    "missing_is_not_zero": true,
+    "geocode_authorized": false
+  },
+  "references": {
+    "design": "../../../docs/own_data_survey_design.md",
+    "analysis": "../../../docs/own_data_analysis_plan.md"
+  },
+  "importer_implemented": true,
+  "test_data_policy": "Fixtures TEST DATA separados; no son respuestas del estudio y no se importan en modo normal."
+}

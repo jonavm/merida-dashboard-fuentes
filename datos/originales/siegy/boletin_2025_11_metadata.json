@@ -1,0 +1,22 @@
+{
+  "institution": "Gobierno del Estado de Yucatán — SIEGY",
+  "dataset": "Boletín 2025-11 — Día Mundial del Transporte Sostenible",
+  "portal_url": "https://datos.yucatan.gob.mx/",
+  "catalog_url": "https://datos.yucatan.gob.mx/boletines",
+  "source_url": "https://datos.yucatan.gob.mx/storage/boletines/archivos/2025/Boletin_2025_11.pdf",
+  "final_url": "https://datos.yucatan.gob.mx/storage/boletines/archivos/2025/Boletin_2025_11.pdf",
+  "retrieved_at_utc": "2026-09-28T23:53:54.156533+00:00",
+  "content_type": "application/pdf",
+  "download_reused": true,
+  "raw_file": "data\\raw\\siegy\\boletin_2025_11_transporte_sostenible.pdf",
+  "raw_sha256": "52e1742f7bc775d00e4e87b9fdcf74c6eb1458de0f844b4ec2f62f1fbe5fc6cc",
+  "raw_bytes": 1414972,
+  "format": "PDF",
+  "pages": 1,
+  "geographic_levels": [
+    "ciudad reportada por ENSU",
+    "entidad federativa"
+  ],
+  "processed_file": "data\\processed\\siegy\\indicadores_movilidad_siegy_2025_11.csv",
+  "processing": "Transcripción estructurada de seis valores explícitos del PDF; sin unión con ATUS."
+}

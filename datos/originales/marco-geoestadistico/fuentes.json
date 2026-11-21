@@ -1,0 +1,35 @@
+{
+  "agebu": {
+    "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/agebu/31/050",
+    "consulta_utc": "2026-09-23T01:34:41.681498+00:00",
+    "sha256": "c89bd0466a7dfe33ad7dd40b901724740506af14c780f6214e0817eae9f0f5d5",
+    "features": 545,
+    "metadatos": {
+      "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+      "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+    },
+    "crs": "EPSG:4326, convención GeoJSON sin miembro crs"
+  },
+  "agebr": {
+    "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/agebr/31/050",
+    "consulta_utc": "2026-09-23T01:34:41.995249+00:00",
+    "sha256": "68d68085b5a4bfbf70e4714ce31d80a14fed98ae7191b7d993d79180a41ae1b1",
+    "features": 5,
+    "metadatos": {
+      "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+      "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+    },
+    "crs": "EPSG:4326, convención GeoJSON sin miembro crs"
+  },
+  "mgem": {
+    "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/31/050",
+    "consulta_utc": "2026-09-23T01:34:42.128953+00:00",
+    "sha256": "0a01e74dce35019908a684db42e86d943e1d5d284c4511580833c19513b6113a",
+    "features": 1,
+    "metadatos": {
+      "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+      "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+    },
+    "crs": "EPSG:4326, convención GeoJSON sin miembro crs"
+  }
+}
