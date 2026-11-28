@@ -1,0 +1,72 @@
+{
+  "TIPACCID": {
+    "estado": "pendiente",
+    "fuente_url": null,
+    "referencia": null,
+    "anios": [],
+    "codigos": {}
+  },
+  "CLASE": {
+    "estado": "pendiente",
+    "fuente_url": null,
+    "referencia": null,
+    "anios": [],
+    "codigos": {}
+  },
+  "CAUSAACCI": {
+    "estado": "pendiente",
+    "fuente_url": null,
+    "referencia": null,
+    "anios": [],
+    "codigos": {}
+  },
+  "DIASEMANA": {
+    "estado": "pendiente",
+    "fuente_url": null,
+    "referencia": null,
+    "anios": [],
+    "codigos": {}
+  },
+  "SEXO": {
+    "estado": "pendiente",
+    "fuente_url": null,
+    "referencia": null,
+    "anios": [],
+    "codigos": {}
+  },
+  "ALIENTO": {
+    "estado": "pendiente",
+    "fuente_url": null,
+    "referencia": null,
+    "anios": [],
+    "codigos": {}
+  },
+  "CINTURON": {
+    "estado": "pendiente",
+    "fuente_url": null,
+    "referencia": null,
+    "anios": [],
+    "codigos": {}
+  },
+  "URBANA": {
+    "estado": "pendiente",
+    "fuente_url": null,
+    "referencia": null,
+    "anios": [],
+    "codigos": {}
+  },
+  "SUBURBANA": {
+    "estado": "pendiente",
+    "fuente_url": null,
+    "referencia": null,
+    "anios": [],
+    "codigos": {}
+  },
+  "CAPAROD": {
+    "estado": "pendiente",
+    "fuente_url": null,
+    "referencia": null,
+    "anios": [],
+    "codigos": {}
+  }
+}

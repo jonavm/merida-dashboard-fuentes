@@ -1,0 +1,15 @@
+{
+  "institucion": "INEGI",
+  "conjunto": "Censo de Población y Vivienda 2020. Resultados por AGEB y manzana urbana, Yucatán",
+  "url": "https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/ageb_manzana/ageb_mza_urbana_31_cpv2020_csv.zip",
+  "archivo_zip": "ageb_mza_urbana_31_cpv2020/conjunto_de_datos/conjunto_de_datos_ageb_urbana_31_cpv2020.csv",
+  "sha256_zip": "5cc69c7a9f0f248e1e19f960b4498a5459d4bedbc1bdc5dd7f98bfac44f99180",
+  "sha256_recorte": "4e753b53e10a326e6f345a545195f973faeacfd8e71ef12aab97194173da072a",
+  "filtros": {
+    "ENTIDAD": "31",
+    "MUN": "050",
+    "MZA": "000",
+    "AGEB": "distinta de 0000"
+  },
+  "filas": 526
+}

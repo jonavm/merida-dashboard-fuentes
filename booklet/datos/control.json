@@ -1,0 +1,26 @@
+{
+  "accidentes_total": 8815,
+  "periodo": [
+    2021,
+    2024
+  ],
+  "ageb_urbanas": 545,
+  "accidentes_ageb_urbana": 8074,
+  "accidentes_ageb_rural": 261,
+  "accidentes_ageb_multiple": 321,
+  "accidentes_sin_ageb": 159,
+  "ageb_tasa_calculable": 520,
+  "ageb_estado_denominador": {
+    "calculable": 520,
+    "sin_clave_censo": 19,
+    "sin_poblacion_positiva": 6
+  },
+  "accidentes_en_ageb_con_denominador": 8044,
+  "acercamiento_vial": {
+    "cvegeo_ageb": "3105000013248",
+    "registros": 25,
+    "celdas_de_100_m": 6
+  },
+  "registros_con_fecha_y_hora": 8815,
+  "registros_sin_fecha_u_hora": 0
+}

@@ -31,5 +31,16 @@
       "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
     },
     "crs": "EPSG:4326, convención GeoJSON sin miembro crs"
+  },
+  "mgee": {
+    "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgee/31",
+    "consulta_local": "2026-11-27",
+    "sha256": "bded09803dbdb7a4d16e3dfea27d72682e2c92f28acab0eb9a8b4962a2b79b27",
+    "features": 1,
+    "metadatos": {
+      "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+      "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+    },
+    "crs": "EPSG:4326, convención GeoJSON sin miembro crs"
   }
 }

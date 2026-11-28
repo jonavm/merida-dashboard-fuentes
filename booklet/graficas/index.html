@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Dónde se nos complica el volante? · Equipo 6</title>
+  <link rel="stylesheet" href="estilo.css?v=titulos">
+  <script src="vendor/d3-7.9.0.min.js" defer></script>
+  <script src="escenas.js?v=titulos-acordados" defer></script>
+</head>
+<body>
+  <main class="capitulo">
+    <header class="entrada">
+      <p class="rotulo">Capítulo 06 · Acto 3 · Moverse</p>
+      <h1>¿Dónde se nos complica el volante?</h1>
+      <p class="bajada">En el municipio de Mérida, los registros de tránsito se concentran en algunas zonas y horas. Cuatro escenas muestran dónde, cuándo y de qué tipo fueron los accidentes registrados.</p>
+      <dl class="cifras" aria-label="La historia en 10 segundos" hidden></dl>
+      <nav aria-label="Escenas del capítulo">
+        <a href="#escena-1">Densidad</a>
+        <a href="#escena-2">Por habitantes</a>
+        <a href="#escena-3">Día y hora</a>
+        <a href="#escena-4">Tipo de accidente</a>
+      </nav>
+    </header>
+
+    <p id="estado" role="status">Cargando gráficas…</p>
+
+    <figure id="escena-1" class="escena" aria-labelledby="titulo-1">
+      <p class="rotulo">Escena 1 · Dónde</p>
+      <h2 id="titulo-1"></h2>
+      <p class="subtitulo">Densidad de accidentes registrados por km² en AGEB urbanas del municipio de Mérida · 2021–2024</p>
+      <div class="dibujo"></div>
+      <figcaption></figcaption>
+      <p class="fuente">Fuente: INEGI, accidentes georreferenciados (ATUS) · Corte: 31 dic. 2024. Marco Geoestadístico, dic. 2025.</p>
+    </figure>
+
+    <figure id="escena-2" class="escena" aria-labelledby="titulo-2">
+      <p class="rotulo">Escena 2 · Población de referencia</p>
+      <h2 id="titulo-2"></h2>
+      <p class="subtitulo">Accidentes acumulados de 2021–2024 por cada 1,000 habitantes censados en 2020 · AGEB urbanas, Mérida</p>
+      <div class="dibujo"></div>
+      <figcaption></figcaption>
+      <p class="fuente">Fuente: INEGI, accidentes georreferenciados (ATUS) · Corte: 31 dic. 2024. Censo de Población y Vivienda 2020 (CPV2020). Marco Geoestadístico, dic. 2025.</p>
+    </figure>
+
+    <figure id="escena-3" class="escena" aria-labelledby="titulo-3">
+      <p class="rotulo">Escena 3 · Cuándo</p>
+      <h2 id="titulo-3"></h2>
+      <p class="subtitulo">Número de accidentes registrados por día de la semana y hora local · Mérida, 2021–2024</p>
+      <div class="dibujo"></div>
+      <figcaption></figcaption>
+      <p class="fuente">Fuente: INEGI, accidentes georreferenciados (ATUS) · Corte: 31 dic. 2024.</p>
+    </figure>
+
+    <figure id="escena-4" class="escena" aria-labelledby="titulo-4">
+      <p class="rotulo">Escena 4 · Qué pasó</p>
+      <h2 id="titulo-4"></h2>
+      <p class="subtitulo">Número de accidentes registrados por tipo oficial (TIPACCID) · Mérida, 2021–2024</p>
+      <div class="dibujo"></div>
+      <figcaption></figcaption>
+      <p class="fuente">Fuente: INEGI, accidentes georreferenciados y catálogos de tipos de accidente (ATUS) · Corte: 31 dic. 2024.</p>
+      <p class="puente">¿Qué cambia cuando recorremos esas calles a pie y toca cruzarlas?</p>
+    </figure>
+  </main>
+</body>
+</html>

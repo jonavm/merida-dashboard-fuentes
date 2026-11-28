@@ -4,6 +4,8 @@
 
 Archivos y fuentes para el ETL del dashboard de accidentes viales en el **municipio de Mérida, Yucatán (31050)**. El punto de partida es el registro georreferenciado de accidentes de INEGI.
 
+[Capítulo del booklet](booklet/) · [Datos de las escenas](booklet/datos/FUENTES.md) · [Código de reproducción](scripts/)
+
 [Descargas](#descargas) · [Procedencia y acceso](#procedencia-y-acceso) · [Fuentes en preparación](#fuentes-en-preparación) · [Claves para el ETL](#claves-para-el-etl)
 
 ## Descargas

@@ -1,0 +1,11 @@
+codigo_tipaccid,tipo_accidente,accidentes
+1,Colisión con vehículo automotor,3185
+4,Colisión con objeto fijo,2461
+10,Colisión con motocicleta,2111
+7,Salida del camino,297
+2,Colisión con peatón,279
+5,Volcadura,256
+11,Colisión con ciclista,203
+6,Caída de pasajero,18
+8,Incendio,4
+3,Colisión con animal,1
